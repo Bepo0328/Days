@@ -18,19 +18,41 @@ class DaysTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testLocalStorage() {
+        let storage: EventStorage = LocalEventStorage(with: UserDefaults(suiteName: "test")!)
+        
+        storage.clear()
+        
+        XCTAssertTrue(storage.list().isEmpty)
+        
+        let firstDate = Date()
+        let first = Event(title: "first", icon: 1, date: firstDate)
+        
+        storage.add(first)
+        
+        XCTAssertTrue(storage.list().count == 1)
+        
+        let fetchedFirst = storage.list()[0]
+        XCTAssertTrue(fetchedFirst == first)
+        XCTAssertTrue(fetchedFirst.title == first.title)
+        
+        let secondDate = Date()
+        let second = Event(title: "second", icon: 2, date: secondDate)
+        
+        storage.add(second)
+        
+        XCTAssertTrue(storage.list().count == 2)
+        
+        storage.delete(first)
+        
+        XCTAssertTrue(storage.list().count == 1)
+        
+        let fetchedSecond = storage.list()[0]
+        
+        XCTAssertTrue(fetchedSecond == second)
+        
+        storage.delete(second)
+        
+        XCTAssertTrue(storage.list().isEmpty)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
