@@ -16,6 +16,9 @@
 		584A505427B3F45700E26ACC /* DaysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584A505327B3F45700E26ACC /* DaysTests.swift */; };
 		584A505E27B3F45700E26ACC /* DaysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584A505D27B3F45700E26ACC /* DaysUITests.swift */; };
 		584A506027B3F45700E26ACC /* DaysUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584A505F27B3F45700E26ACC /* DaysUITestsLaunchTests.swift */; };
+		584A507327B3F50E00E26ACC /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584A507227B3F50E00E26ACC /* Event.swift */; };
+		584A507527B3F60000E26ACC /* EventStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584A507427B3F60000E26ACC /* EventStorage.swift */; };
+		584A507727B3F69600E26ACC /* LocalEventStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584A507627B3F69600E26ACC /* LocalEventStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		584A505927B3F45700E26ACC /* DaysUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaysUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		584A505D27B3F45700E26ACC /* DaysUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysUITests.swift; sourceTree = "<group>"; };
 		584A505F27B3F45700E26ACC /* DaysUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		584A507227B3F50E00E26ACC /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		584A507427B3F60000E26ACC /* EventStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStorage.swift; sourceTree = "<group>"; };
+		584A507627B3F69600E26ACC /* LocalEventStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEventStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		584A503B27B3F45300E26ACC /* Days */ = {
 			isa = PBXGroup;
 			children = (
+				584A507027B3F4F200E26ACC /* Event */,
 				584A503C27B3F45300E26ACC /* AppDelegate.swift */,
 				584A503E27B3F45300E26ACC /* SceneDelegate.swift */,
 				584A504027B3F45300E26ACC /* ViewController.swift */,
@@ -125,6 +132,16 @@
 				584A505F27B3F45700E26ACC /* DaysUITestsLaunchTests.swift */,
 			);
 			path = DaysUITests;
+			sourceTree = "<group>";
+		};
+		584A507027B3F4F200E26ACC /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				584A507227B3F50E00E26ACC /* Event.swift */,
+				584A507427B3F60000E26ACC /* EventStorage.swift */,
+				584A507627B3F69600E26ACC /* LocalEventStorage.swift */,
+			);
+			path = Event;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +275,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				584A507727B3F69600E26ACC /* LocalEventStorage.swift in Sources */,
+				584A507327B3F50E00E26ACC /* Event.swift in Sources */,
+				584A507527B3F60000E26ACC /* EventStorage.swift in Sources */,
 				584A504127B3F45300E26ACC /* ViewController.swift in Sources */,
 				584A503D27B3F45300E26ACC /* AppDelegate.swift in Sources */,
 				584A503F27B3F45300E26ACC /* SceneDelegate.swift in Sources */,
