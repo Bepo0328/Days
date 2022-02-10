@@ -82,6 +82,14 @@ extension EventListViewController: EventEditorViewControllerDelegate {
             tableView.reloadData()
         }
         
+        if widget == false {
+            if WidgetDefaults.shared.id == event.id {
+                WidgetDefaults.shared.id = nil
+            }
+        } else {
+            WidgetDefaults.shared.id = event.id
+        }
+        
         self.dismiss(animated: true, completion: nil)
     }
 }

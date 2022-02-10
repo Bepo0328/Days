@@ -13,6 +13,23 @@ enum EventEditorMode {
     case edit
 }
 
+final class WidgetDefaults {
+    static let shared = WidgetDefaults()
+    
+    private let defaults = UserDefaults.standard
+    private let key = "widget_id"
+    
+    var id: Double? {
+        get {
+            return defaults.double(forKey: key)
+        }
+        
+        set {
+            defaults.setValue(newValue, forKey: key)
+        }
+    }
+}
+
 protocol EventEditorViewControllerDelegate: AnyObject {
     func eventEditorViewController(_ controller: EventEditorViewController, finishEditing event: Event, mode: EventEditorMode, widget: Bool)
 }
@@ -32,8 +49,23 @@ class EventEditorViewController: UITableViewController {
         self.iconButton.setImage(UIImage(named: "icon_\(event.icon)"), for: .normal)
         self.titleField.text = event.title
         self.datePicker.date = event.date
-        self.widgetSwitch.isOn = UserDefaults.standard.double(forKey: "widget") == event.id
+        self.widgetSwitch.isOn = WidgetDefaults.shared.id == event.id
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let identifier = segue.identifier
+        if identifier == "IconPicker" {
+            let navigationController = segue.destination as? UINavigationController
+            let iconPickerViewController = navigationController?.topViewController as? IconPickerViewController
+            
+            iconPickerViewController?.delegate = self
+        }
+    }
+    
+    @IBAction func presentIconPicker() {
+        performSegue(withIdentifier: "IconPicker", sender: nil)
+    }
+    
     
     @IBAction func dateChanged() {
         self.event.date = datePicker.date
@@ -48,5 +80,13 @@ class EventEditorViewController: UITableViewController {
             event.title = title
             delegate.eventEditorViewController(self, finishEditing: event, mode: mode, widget: widgetSwitch.isOn)
         }
+    }
+}
+
+extension EventEditorViewController: IconPickerViewControllerDelegate {
+    func iconPickerViewController(_ controller: IconPickerViewController, didSelectIcon icon: Int) {
+        self.event.icon = icon
+        self.iconButton.setImage(UIImage(named: "icon_\(event.icon)"), for: .normal)
+        self.dismiss(animated: true, completion: nil)
     }
 }

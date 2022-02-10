@@ -21,6 +21,7 @@
 		584A507727B3F69600E26ACC /* LocalEventStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584A507627B3F69600E26ACC /* LocalEventStorage.swift */; };
 		584A507927B400DF00E26ACC /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 584A507827B400DF00E26ACC /* Icons.xcassets */; };
 		584A507B27B4044700E26ACC /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584A507A27B4044700E26ACC /* EventListViewController.swift */; };
+		589EC97627B555380052ED30 /* IconPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589EC97527B555380052ED30 /* IconPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		584A507627B3F69600E26ACC /* LocalEventStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEventStorage.swift; sourceTree = "<group>"; };
 		584A507827B400DF00E26ACC /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		584A507A27B4044700E26ACC /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
+		589EC97527B555380052ED30 /* IconPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				584A504727B3F45600E26ACC /* LaunchScreen.storyboard */,
 				584A504227B3F45300E26ACC /* Main.storyboard */,
 				5827603C27B54D7700101D34 /* EventEditorViewController.swift */,
+				589EC97527B555380052ED30 /* IconPickerViewController.swift */,
 			);
 			path = Days;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				584A507527B3F60000E26ACC /* EventStorage.swift in Sources */,
 				584A503D27B3F45300E26ACC /* AppDelegate.swift in Sources */,
 				584A503F27B3F45300E26ACC /* SceneDelegate.swift in Sources */,
+				589EC97627B555380052ED30 /* IconPickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
