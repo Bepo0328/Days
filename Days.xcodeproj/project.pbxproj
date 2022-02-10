@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5827603D27B54D7700101D34 /* EventEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5827603C27B54D7700101D34 /* EventEditorViewController.swift */; };
 		584A503D27B3F45300E26ACC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584A503C27B3F45300E26ACC /* AppDelegate.swift */; };
 		584A503F27B3F45300E26ACC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584A503E27B3F45300E26ACC /* SceneDelegate.swift */; };
 		584A504427B3F45300E26ACC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 584A504227B3F45300E26ACC /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5827603C27B54D7700101D34 /* EventEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEditorViewController.swift; sourceTree = "<group>"; };
 		584A503927B3F45300E26ACC /* Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Days.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		584A503C27B3F45300E26ACC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		584A503E27B3F45300E26ACC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				584A507027B3F4F200E26ACC /* Event */,
 				584A504727B3F45600E26ACC /* LaunchScreen.storyboard */,
 				584A504227B3F45300E26ACC /* Main.storyboard */,
+				5827603C27B54D7700101D34 /* EventEditorViewController.swift */,
 			);
 			path = Days;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				584A507727B3F69600E26ACC /* LocalEventStorage.swift in Sources */,
+				5827603D27B54D7700101D34 /* EventEditorViewController.swift in Sources */,
 				584A507B27B4044700E26ACC /* EventListViewController.swift in Sources */,
 				584A507327B3F50E00E26ACC /* Event.swift in Sources */,
 				584A507527B3F60000E26ACC /* EventStorage.swift in Sources */,
