@@ -30,6 +30,11 @@
 		589EC98927B6967F0052ED30 /* Widgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 589EC98427B6967C0052ED30 /* Widgets.intentdefinition */; };
 		589EC98C27B6967F0052ED30 /* WidgetsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 589EC97B27B6967C0052ED30 /* WidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		589EC99127B699460052ED30 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584A507227B3F50E00E26ACC /* Event.swift */; };
+		589EC99427B6A7970052ED30 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 584A507827B400DF00E26ACC /* Icons.xcassets */; };
+		589EC99627B6AA090052ED30 /* WidgetDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589EC99527B6AA090052ED30 /* WidgetDefaults.swift */; };
+		589EC99727B6AA1E0052ED30 /* WidgetDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589EC99527B6AA090052ED30 /* WidgetDefaults.swift */; };
+		589EC99827B6AA410052ED30 /* LocalEventStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584A507627B3F69600E26ACC /* LocalEventStorage.swift */; };
+		589EC99927B6AAED0052ED30 /* EventStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584A507427B3F60000E26ACC /* EventStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +104,7 @@
 		589EC98727B6967F0052ED30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		589EC99227B69CC10052ED30 /* Days.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Days.entitlements; sourceTree = "<group>"; };
 		589EC99327B69FC60052ED30 /* WidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetsExtension.entitlements; sourceTree = "<group>"; };
+		589EC99527B6AA090052ED30 /* WidgetDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +179,7 @@
 				584A504727B3F45600E26ACC /* LaunchScreen.storyboard */,
 				584A504227B3F45300E26ACC /* Main.storyboard */,
 				5827603C27B54D7700101D34 /* EventEditorViewController.swift */,
+				589EC99527B6AA090052ED30 /* WidgetDefaults.swift */,
 				589EC97527B555380052ED30 /* IconPickerViewController.swift */,
 			);
 			path = Days;
@@ -377,6 +384,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				589EC99427B6A7970052ED30 /* Icons.xcassets in Resources */,
 				589EC98627B6967F0052ED30 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				584A507727B3F69600E26ACC /* LocalEventStorage.swift in Sources */,
+				589EC99627B6AA090052ED30 /* WidgetDefaults.swift in Sources */,
 				589EC98927B6967F0052ED30 /* Widgets.intentdefinition in Sources */,
 				5827603D27B54D7700101D34 /* EventEditorViewController.swift in Sources */,
 				584A507B27B4044700E26ACC /* EventListViewController.swift in Sources */,
@@ -424,6 +433,9 @@
 				589EC98827B6967F0052ED30 /* Widgets.intentdefinition in Sources */,
 				589EC99127B699460052ED30 /* Event.swift in Sources */,
 				589EC98327B6967C0052ED30 /* Widgets.swift in Sources */,
+				589EC99827B6AA410052ED30 /* LocalEventStorage.swift in Sources */,
+				589EC99927B6AAED0052ED30 /* EventStorage.swift in Sources */,
+				589EC99727B6AA1E0052ED30 /* WidgetDefaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

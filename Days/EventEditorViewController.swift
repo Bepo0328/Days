@@ -13,23 +13,6 @@ enum EventEditorMode {
     case edit
 }
 
-final class WidgetDefaults {
-    static let shared = WidgetDefaults()
-    
-    private let defaults = UserDefaults.standard
-    private let key = "widget_id"
-    
-    var id: Double? {
-        get {
-            return defaults.double(forKey: key)
-        }
-        
-        set {
-            defaults.setValue(newValue, forKey: key)
-        }
-    }
-}
-
 protocol EventEditorViewControllerDelegate: AnyObject {
     func eventEditorViewController(_ controller: EventEditorViewController, finishEditing event: Event, mode: EventEditorMode, widget: Bool)
 }

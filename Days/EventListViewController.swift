@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import WidgetKit
 
 struct EventAction {
     var event: Event
@@ -43,7 +44,7 @@ class EventListCell: UITableViewCell {
 }
 
 class EventListViewController: UIViewController {
-    let storage: EventStorage = LocalEventStorage()
+    let storage: EventStorage = LocalEventStorage(with: UserDefaults(suiteName: "group.kr.co.bepo.days")!)
 
     @IBOutlet weak private var tableView: UITableView!
     
@@ -91,6 +92,8 @@ extension EventListViewController: EventEditorViewControllerDelegate {
         }
         
         self.dismiss(animated: true, completion: nil)
+        
+        WidgetCenter.shared.reloadAllTimelines()
     }
 }
 
